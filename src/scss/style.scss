@@ -1,14 +1,5 @@
+@import 'normalize';
+@import 'variables';
+@import 'settings';
 @import "fonts";
 @import "mixins";
-
-body {
-  font-family: 'GothamPro', sans-serif;
-  background: url("@img/house.jpg") 0 0 no-repeat, #555;
-  color: white;
-  font-size: 20px;
-
-  span {
-    color: red;
-  }
-
-}
