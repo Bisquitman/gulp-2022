@@ -8,7 +8,7 @@ export const otfToTtf = () => {
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
         title: "FONTS",
-        message: "Error: <%= error message %>"
+        message: "Error: <%= error.message %>"
       })))
     // Конвертируем в .ttf
     .pipe(fonter({
@@ -24,7 +24,7 @@ export const ttfToWoff = () => {
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
         title: "FONTS",
-        message: "Error: <%= error message %>"
+        message: "Error: <%= error.message %>"
       })))
     // Конвертируем в .woff
     .pipe(fonter({
@@ -76,7 +76,7 @@ export const fontsStyle = () => {
             } else {
               fontWeight = 400;
             }
-            fs.appendFile(fontsFile, `@font-face{\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`, cb);
+            fs.appendFile(fontsFile, `@font-face{\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("../assets/fonts/${fontFileName}.woff2") format("woff2"), url("../assets/fonts/${fontFileName}.woff") format("woff");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`, cb);
             // Внизу запись развёрнута для наглядности
             // fs.appendFile(fontsFile,
             //   `@font-face {

@@ -5,7 +5,7 @@ export const svgsprite = () => {
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
         title: "SVGSPRITE",
-        message: "Error: <%= error message %>"
+        message: "Error: <%= error.message %>"
       })))
     .pipe(svgSprite({
       mode: {

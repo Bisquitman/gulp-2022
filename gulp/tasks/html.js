@@ -7,7 +7,7 @@ export const html = () => {
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
         title: "HTML",
-        message: "Error: <%= error message %>"
+        message: "Error: <%= error.message %>"
       })))
     .pipe(fileinclude())
     .pipe(app.plugins.replace(/@img\//g, 'img/'))
