@@ -1,4 +1,5 @@
 // <!-- Подключение шрифтов -->
+/*
 // @font-face {
 //   font-family: 'SF Pro Display Regular';
 //   src: local('SF Pro Display Regular');
@@ -22,6 +23,11 @@
 //   font-weight: bold;
 //   font-style: normal;
 // }
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap");
+$fontFamily: "Roboto",
+"Arial",
+sans-serif;
 // <!-- Подключение шрифтов -->
 
 html {
@@ -42,11 +48,11 @@ img {
 }
 
 body {
-  /*font-family: ;   подключение основного шрифта сайта 
-  font-size: 1.4rem; основной размер шрифта сайта - под проект
-  line-height: 157%;
-  background-color: ; цвет фона страницы - под проект 
-  */
+  height: 100%;
+  font-family: $fontFamily; // подключение основного шрифта сайта 
+  font-size: 1.4rem; // основной размер шрифта сайта - под проект
+  line-height: 157%; // высота строки - под проект
+  background-color: #333; // цвет фона страницы - под проект 
 }
 
 h1,
@@ -54,7 +60,7 @@ h2,
 h3,
 h4,
 h5 {
-  /*font-family: $SF-semibold; Гарнитура шрифта для заголовков - под проект */
+  font-family: $fontFamily; // Гарнитура шрифта для заголовков - под проект
 }
 
 h1,
@@ -67,15 +73,15 @@ p {
 }
 
 .wrapper {
-  overflow: hidden;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  overflow: hidden;
 }
 
 .container,
 [class*="__container"] {
-  $side-padding: 1.6rem;
+  $side-padding: 3rem;
   max-width: (120rem + $side-padding * 2);
   margin: 0 auto;
   padding: 0 $side-padding;
