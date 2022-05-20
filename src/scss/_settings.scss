@@ -52,6 +52,7 @@ body {
   font-family: $fontFamily; // подключение основного шрифта сайта 
   font-size: 1.4rem; // основной размер шрифта сайта - под проект
   line-height: 157%; // высота строки - под проект
+  color: #eee;
   background-color: #333; // цвет фона страницы - под проект 
 }
 
@@ -73,7 +74,7 @@ p {
 }
 
 .wrapper {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
