@@ -49,6 +49,9 @@ img {
 
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   // height: 100%;
   font-family: $fontFamily; // подключение основного шрифта сайта 
   font-size: 1.4rem; // основной размер шрифта сайта - под проект
